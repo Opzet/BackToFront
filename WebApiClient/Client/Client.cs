@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -11,6 +12,7 @@ namespace WebApiClient
     public static partial class ApiCalls
     {
         private static readonly HttpClient _httpClient;
+        public const int InternalPort = 54322;  //<<for TESTING
 
         public static JsonSerializerSettings settings = new JsonSerializerSettings
         {
@@ -22,14 +24,17 @@ namespace WebApiClient
 
         static ApiCalls()
         {
+
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("http://127.0.0.1/");
+            _httpClient.BaseAddress = new Uri($"http://127.0.0.1:{InternalPort}/ ");
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public static async Task<IEnumerable<T>> GetAllAsync<T>()
         {
+            Debug.WriteLine($"\tTest URL : {$"{_httpClient.BaseAddress}api/{typeof(T).Name}/all"}");
+
             HttpResponseMessage response = await _httpClient.GetAsync($"api/{typeof(T).Name}/all");
             if (response.IsSuccessStatusCode)
             {

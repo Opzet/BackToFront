@@ -5,6 +5,9 @@ using System.IO;
 
 namespace Helpers
 {
+    /// <summary>
+    /// Version information and other utility methods
+    /// </summary>
     public static class Utils
     {
         /// <summary>

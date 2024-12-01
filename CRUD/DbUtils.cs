@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -17,6 +18,15 @@ namespace CRUD
 
         public static void InitDb()
         {
+            if(Debugger.IsAttached)
+            {
+                //Empty Database
+                using (var db = new ClassificationEF())
+                {
+                    if(db.Database.Exists())  db.Database.Delete();
+                }
+            }
+
             using (var db = new ClassificationEF())
             {
                 db.Database.CreateIfNotExists();
@@ -48,37 +58,77 @@ namespace CRUD
 
         static void SeedDb()
         {
-
-
-            //Seed Types
-            CRUD.Db.Create(new Type { Name = "1 - Type A" });
-            CRUD.Db.Create(new Type { Name = "1 - Type B" });
-            CRUD.Db.Create(new Type { Name = "1 - Type C" });
-
-
             using (var db = new ClassificationEF())
             {
-                // Create some dummy data
-                var type = new Type { Name = "1 - Type" };
-                var make = new Make { Name = "2 - Make" };
-                var model = new Model { Name = "3 - Model" };
-               
-                var product = new Product
+                // Check if the database is already seeded
+                if (!db.Types.Any() && !db.Makes.Any() && !db.Models.Any() && !db.Products.Any())
                 {
-                    Revision = "1.0",
-                    Make = make,
-                    Model = model,
-                    Type = type
-                };
+                    // Seed Types
+                    var types = new List<Type>
+                    {
+                        new Type { Name = "1 - Type A" },
+                        new Type { Name = "1 - Type B" },
+                        new Type { Name = "1 - Type C" }
+                    };
+                    db.Types.AddRange(types);
 
-                product.Attributes.Add(new Attribute { Name = "Attribute1", AttributeKeys = new AttributeKeys { Name = "Key1" } });
-                product.Attributes.Add(new Attribute { Name = "Attribute2", AttributeKeys = new AttributeKeys { Name = "Key2" } });
+                    // Seed Makes
+                    var makes = new List<Make>
+                    {
+                        new Make { Name = "2 - Make A" },
+                        new Make { Name = "2 - Make B" },
+                        new Make { Name = "2 - Make C" }
+                    };
+                    db.Makes.AddRange(makes);
 
-                product.ProductImages.Add(new ProductImage { ImagePath = "path/to/image1.jpg", ImageDate = DateTime.Now });
+                    // Seed Models
+                    var models = new List<Model>
+                    {
+                        new Model { Name = "3 - Model A" },
+                        new Model { Name = "3 - Model B" },
+                        new Model { Name = "3 - Model C" }
+                    };
+                    db.Models.AddRange(models);
 
-                // Add the product to the database
-                db.Products.Add(product);
-                db.SaveChanges();
+                    // Seed Products
+                    var products = new List<Product>
+                    {
+                        new Product
+                        {
+                            Type = types[0],
+                            Make = makes[0],
+                            Model = models[0],
+                            Revision = "1.0"
+                        },
+                        new Product
+                        {
+                            Type = types[1],
+                            Make = makes[1],
+                            Model = models[1],
+                            Revision = "1.0"
+                        },
+                        new Product
+                        {
+                            Type = types[2],
+                            Make = makes[2],
+                            Model = models[2],
+                            Revision = "1.0"
+                        }
+
+                    };
+
+                    db.Products.AddRange(products);
+                    
+                    db.SaveChanges();
+
+                    foreach (var p in db.Products)
+                    {
+                        int index = 0;
+                        p.Attributes.Add(new Attribute { Name = $"Attribute {index}", AttributeKeys = new AttributeKeys { Name = $"Key {index}" } });
+                        p.ProductImages.Add(new ProductImage { ImagePath = $"path/to/image{index}.jpg", ImageDate = DateTime.Now });
+                    }
+                    db.SaveChanges();
+                }
             }
         }
     }

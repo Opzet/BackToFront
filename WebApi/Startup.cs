@@ -74,7 +74,7 @@ namespace WebApi
             {
                 AllowAnyHeader = true,
                 AllowAnyMethod = true,
-                Origins = { "http://192.168.100.171", "https://192.168.100.171", "http://127.0.0.1", "https://127.0.0.1" }
+                Origins = { "http://127.0.0.1", "https://127.0.0.1" } //"http://192.168.100.171", "https://192.168.100.171"
             };
 
             appBuilder.UseCors(new CorsOptions

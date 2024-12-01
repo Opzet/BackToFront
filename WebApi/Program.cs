@@ -3,6 +3,7 @@ using Models;
 using System;
 using System.Deployment.Application;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
 using System.Security.Principal;
 
@@ -87,31 +88,42 @@ namespace WebApi
                 // Spin Up WebApi by doing a call
                 Stopwatch sw = new Stopwatch();
                 sw.Start();
-                Console.WriteLine($"<SPIN SPIN UP OWIN HOST> Dummy http Web Request ");
-                Console.WriteLine("...please wait...");
+                Console.WriteLine($"<SPIN UP OWIN API HOST> Dummy http Web Request ");
+                Console.WriteLine("\t...please wait...");
 
 
                 // Do a dummy call to the WebApi server to spin it up
                 var productWebList = WebApiClient.ApiCalls.GetAllAsync<Product>().Result;
-                if (productWebList != null)
+
+                // Display the WebApi response
+                try
                 {
-                    // Display the WebApi response
-                    foreach (var product in productWebList)
+                    if (productWebList != null && productWebList.Any())
                     {
-                        // Use reflection to show each property of the product
-                        foreach (PropertyInfo prop in product.GetType().GetProperties())
+                        Console.WriteLine("Products retrieved from Web API:");
+                        foreach (var product in productWebList)
                         {
-                            Console.WriteLine($"{prop.Name}: {prop.GetValue(product, null)}");
+                            Console.WriteLine("\nProduct:");
+                            foreach (PropertyInfo prop in product.GetType().GetProperties())
+                            {
+                                Console.WriteLine($"\t{prop.Name}: {prop.GetValue(product, null)}");
+                            }
+                            Console.WriteLine();
                         }
                     }
+                    else
+                    {
+                        Console.WriteLine("\t>WebApiClient.ApiCalls.GetAllAsync<Product>() returned null.");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    Console.WriteLine("WebApiClient.ApiCalls.GetAllAsync<Product>() = null");
+                    Console.WriteLine($"An error occurred while retrieving products: {ex.Message}");
                 }
 
+
                 sw.Stop(); // Stop stopwatch
-                Console.WriteLine($"<INITIALISE DURATION> Startup Time: {baseAddress} - {sw.ElapsedMilliseconds} ms");
+                Console.WriteLine($"\n\n<INITIALISE DURATION> Startup Time: {baseAddress} - {sw.ElapsedMilliseconds} ms");
 
                 Console.WriteLine("Press <ENTER> to stop the server and close the app...");
                 Console.ReadLine();
