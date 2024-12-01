@@ -29,499 +29,376 @@
         private void InitializeComponent()
         {
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.uiCrudKey = new UiFront.UiCrud();
+            this.uiCrudValue = new UiFront.UiCrud();
+            this.uiCrudType = new UiFront.UiCrud();
+            this.uiCrudMake = new UiFront.UiCrud();
+            this.uiCrudModel = new UiFront.UiCrud();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbRowData = new System.Windows.Forms.ComboBox();
+            this.lblPkId = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddAttribute = new System.Windows.Forms.Button();
+            this.btnUpdateAttribute = new System.Windows.Forms.Button();
+            this.btnDeleteAttribute = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnUpdateProduct = new System.Windows.Forms.Button();
+            this.btnDeleteProduct = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblProductTreeSelected = new System.Windows.Forms.Label();
+            this.lblProductSelected = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 39);
+            this.tableLayoutPanel4.SetColumnSpan(this.treeView1, 2);
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(3, 23);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(245, 409);
+            this.treeView1.Size = new System.Drawing.Size(251, 358);
             this.treeView1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(292, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(268, 173);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Type";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pk:";
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(36, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "-1";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(19, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 25);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(99, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 25);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "UPDATE";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(179, 142);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 25);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "DELETE";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(74, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 104);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(292, 191);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(268, 173);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Make";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(74, 20);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(176, 104);
-            this.comboBox2.TabIndex = 4;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(179, 142);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 25);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "DELETE";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(99, 142);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(74, 25);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "UPDATE";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(19, 142);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(74, 25);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "ADD";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(36, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "-1";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Pk:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(292, 370);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(268, 173);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Model";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(74, 20);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(176, 104);
-            this.comboBox3.TabIndex = 4;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(179, 142);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(74, 25);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "DELETE";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(99, 142);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(74, 25);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "UPDATE";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(19, 142);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(74, 25);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "ADD";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(36, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "-1";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Pk:";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.groupBox6);
-            this.groupBox4.Controls.Add(this.groupBox5);
-            this.groupBox4.Location = new System.Drawing.Point(575, 12);
+            this.groupBox4.Controls.Add(this.lblProductSelected);
+            this.groupBox4.Controls.Add(this.groupBox2);
+            this.groupBox4.Controls.Add(this.uiCrudValue);
+            this.groupBox4.Controls.Add(this.uiCrudKey);
+            this.groupBox4.Location = new System.Drawing.Point(570, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(268, 377);
+            this.groupBox4.Size = new System.Drawing.Size(268, 512);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Attribute";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(71, 19);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(176, 104);
-            this.comboBox4.TabIndex = 4;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(179, 129);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(74, 25);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "DELETE";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(99, 129);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(74, 25);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "UPDATE";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(19, 129);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(74, 25);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "ADD";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Location = new System.Drawing.Point(33, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "-1";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(23, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Pk:";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(71, 20);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(176, 104);
-            this.comboBox5.TabIndex = 9;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(176, 142);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(74, 25);
-            this.button13.TabIndex = 11;
-            this.button13.Text = "DELETE";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(96, 142);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(74, 25);
-            this.button14.TabIndex = 10;
-            this.button14.Text = "UPDATE";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(16, 142);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(74, 25);
-            this.button15.TabIndex = 8;
-            this.button15.Text = "ADD";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Location = new System.Drawing.Point(33, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 20);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "-1";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Pk:";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.comboBox4);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.button10);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.button11);
-            this.groupBox5.Controls.Add(this.button12);
-            this.groupBox5.Location = new System.Drawing.Point(3, 20);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(262, 173);
-            this.groupBox5.TabIndex = 12;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Key";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.comboBox5);
-            this.groupBox6.Controls.Add(this.button13);
-            this.groupBox6.Controls.Add(this.button14);
-            this.groupBox6.Controls.Add(this.button15);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Location = new System.Drawing.Point(3, 199);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(256, 173);
-            this.groupBox6.TabIndex = 13;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Value";
+            this.groupBox4.Text = "Attribute CRUD";
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.label11);
-            this.groupBox7.Controls.Add(this.button16);
-            this.groupBox7.Controls.Add(this.button17);
-            this.groupBox7.Controls.Add(this.button18);
-            this.groupBox7.Controls.Add(this.treeView1);
+            this.groupBox7.Controls.Add(this.tableLayoutPanel4);
+            this.groupBox7.Controls.Add(this.uiCrudModel);
+            this.groupBox7.Controls.Add(this.uiCrudMake);
+            this.groupBox7.Controls.Add(this.uiCrudType);
             this.groupBox7.Location = new System.Drawing.Point(12, 12);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(263, 482);
+            this.groupBox7.Size = new System.Drawing.Size(552, 484);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Classification Tree";
             // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(172, 451);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(74, 25);
-            this.button16.TabIndex = 14;
-            this.button16.Text = "DELETE";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(92, 451);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(74, 25);
-            this.button17.TabIndex = 13;
-            this.button17.Text = "UPDATE";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(12, 451);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(74, 25);
-            this.button18.TabIndex = 12;
-            this.button18.Text = "ADD";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 23);
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Location = new System.Drawing.Point(3, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 13);
+            this.label11.Size = new System.Drawing.Size(91, 20);
             this.label11.TabIndex = 15;
-            this.label11.Text = "Product List";
+            this.label11.Text = "Product Tree";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // Form1
+            // uiCrudKey
+            // 
+            this.uiCrudKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCrudKey.Location = new System.Drawing.Point(14, 19);
+            this.uiCrudKey.Name = "uiCrudKey";
+            this.uiCrudKey.Padding = new System.Windows.Forms.Padding(3);
+            this.uiCrudKey.PkId = "-1";
+            this.uiCrudKey.Size = new System.Drawing.Size(246, 139);
+            this.uiCrudKey.TabIndex = 0;
+            this.uiCrudKey.TableName = "Key";
+            // 
+            // uiCrudValue
+            // 
+            this.uiCrudValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCrudValue.Location = new System.Drawing.Point(14, 159);
+            this.uiCrudValue.Name = "uiCrudValue";
+            this.uiCrudValue.Padding = new System.Windows.Forms.Padding(3);
+            this.uiCrudValue.PkId = "-1";
+            this.uiCrudValue.Size = new System.Drawing.Size(246, 179);
+            this.uiCrudValue.TabIndex = 1;
+            this.uiCrudValue.TableName = "Value";
+            // 
+            // uiCrudType
+            // 
+            this.uiCrudType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCrudType.Location = new System.Drawing.Point(283, 13);
+            this.uiCrudType.Name = "uiCrudType";
+            this.uiCrudType.Padding = new System.Windows.Forms.Padding(3);
+            this.uiCrudType.PkId = "-1";
+            this.uiCrudType.Size = new System.Drawing.Size(254, 150);
+            this.uiCrudType.TabIndex = 9;
+            this.uiCrudType.TableName = "Type";
+            // 
+            // uiCrudMake
+            // 
+            this.uiCrudMake.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCrudMake.Location = new System.Drawing.Point(283, 168);
+            this.uiCrudMake.Name = "uiCrudMake";
+            this.uiCrudMake.Padding = new System.Windows.Forms.Padding(3);
+            this.uiCrudMake.PkId = "-1";
+            this.uiCrudMake.Size = new System.Drawing.Size(254, 150);
+            this.uiCrudMake.TabIndex = 10;
+            this.uiCrudMake.TableName = "Make";
+            // 
+            // uiCrudModel
+            // 
+            this.uiCrudModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCrudModel.Location = new System.Drawing.Point(283, 324);
+            this.uiCrudModel.Name = "uiCrudModel";
+            this.uiCrudModel.Padding = new System.Windows.Forms.Padding(3);
+            this.uiCrudModel.PkId = "-1";
+            this.uiCrudModel.Size = new System.Drawing.Size(254, 150);
+            this.uiCrudModel.TabIndex = 11;
+            this.uiCrudModel.TableName = "Model";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox2.Location = new System.Drawing.Point(11, 365);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(263, 141);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Assign Product Attributes";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cbRowData, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblPkId, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(257, 122);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Pk:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbRowData
+            // 
+            this.cbRowData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbRowData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cbRowData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRowData.FormattingEnabled = true;
+            this.cbRowData.Items.AddRange(new object[] {
+            "Empty"});
+            this.cbRowData.Location = new System.Drawing.Point(71, 3);
+            this.cbRowData.Name = "cbRowData";
+            this.tableLayoutPanel1.SetRowSpan(this.cbRowData, 2);
+            this.cbRowData.Size = new System.Drawing.Size(183, 80);
+            this.cbRowData.TabIndex = 4;
+            // 
+            // lblPkId
+            // 
+            this.lblPkId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPkId.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPkId.Location = new System.Drawing.Point(37, 0);
+            this.lblPkId.Name = "lblPkId";
+            this.lblPkId.Size = new System.Drawing.Size(28, 21);
+            this.lblPkId.TabIndex = 2;
+            this.lblPkId.Text = "-1";
+            this.lblPkId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel2, 3);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.btnAddAttribute, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnUpdateAttribute, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnDeleteAttribute, 5, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 89);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(251, 30);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // btnAddAttribute
+            // 
+            this.btnAddAttribute.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddAttribute.Location = new System.Drawing.Point(17, 3);
+            this.btnAddAttribute.Name = "btnAddAttribute";
+            this.btnAddAttribute.Size = new System.Drawing.Size(59, 24);
+            this.btnAddAttribute.TabIndex = 3;
+            this.btnAddAttribute.Text = "ADD";
+            this.btnAddAttribute.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateAttribute
+            // 
+            this.btnUpdateAttribute.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdateAttribute.Location = new System.Drawing.Point(96, 3);
+            this.btnUpdateAttribute.Name = "btnUpdateAttribute";
+            this.btnUpdateAttribute.Size = new System.Drawing.Size(59, 24);
+            this.btnUpdateAttribute.TabIndex = 4;
+            this.btnUpdateAttribute.Text = "UPDATE";
+            this.btnUpdateAttribute.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteAttribute
+            // 
+            this.btnDeleteAttribute.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteAttribute.Location = new System.Drawing.Point(175, 3);
+            this.btnDeleteAttribute.Name = "btnDeleteAttribute";
+            this.btnDeleteAttribute.Size = new System.Drawing.Size(59, 24);
+            this.btnDeleteAttribute.TabIndex = 5;
+            this.btnDeleteAttribute.Text = "DELETE";
+            this.btnDeleteAttribute.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 7;
+            this.tableLayoutPanel4.SetColumnSpan(this.tableLayoutPanel3, 2);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.Controls.Add(this.btnAddProduct, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnUpdateProduct, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnDeleteProduct, 5, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 410);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(251, 41);
+            this.tableLayoutPanel3.TabIndex = 16;
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddProduct.Location = new System.Drawing.Point(17, 3);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(59, 35);
+            this.btnAddProduct.TabIndex = 3;
+            this.btnAddProduct.Text = "ADD";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // btnUpdateProduct
+            // 
+            this.btnUpdateProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdateProduct.Location = new System.Drawing.Point(96, 3);
+            this.btnUpdateProduct.Name = "btnUpdateProduct";
+            this.btnUpdateProduct.Size = new System.Drawing.Size(59, 35);
+            this.btnUpdateProduct.TabIndex = 4;
+            this.btnUpdateProduct.Text = "UPDATE";
+            this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
+            // 
+            // btnDeleteProduct
+            // 
+            this.btnDeleteProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteProduct.Location = new System.Drawing.Point(175, 3);
+            this.btnDeleteProduct.Name = "btnDeleteProduct";
+            this.btnDeleteProduct.Size = new System.Drawing.Size(59, 35);
+            this.btnDeleteProduct.TabIndex = 5;
+            this.btnDeleteProduct.Text = "DELETE";
+            this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.label11, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel3, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.treeView1, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lblProductTreeSelected, 0, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 24);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 4;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(257, 454);
+            this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // lblProductTreeSelected
+            // 
+            this.lblProductTreeSelected.AutoSize = true;
+            this.lblProductTreeSelected.BackColor = System.Drawing.Color.White;
+            this.lblProductTreeSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel4.SetColumnSpan(this.lblProductTreeSelected, 2);
+            this.lblProductTreeSelected.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblProductTreeSelected.Location = new System.Drawing.Point(3, 384);
+            this.lblProductTreeSelected.Name = "lblProductTreeSelected";
+            this.lblProductTreeSelected.Size = new System.Drawing.Size(251, 23);
+            this.lblProductTreeSelected.TabIndex = 17;
+            this.lblProductTreeSelected.Text = "...";
+            this.lblProductTreeSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblProductSelected
+            // 
+            this.lblProductSelected.BackColor = System.Drawing.Color.White;
+            this.lblProductSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblProductSelected.Location = new System.Drawing.Point(17, 341);
+            this.lblProductSelected.Name = "lblProductSelected";
+            this.lblProductSelected.Size = new System.Drawing.Size(251, 23);
+            this.lblProductSelected.TabIndex = 18;
+            this.lblProductSelected.Text = "...";
+            this.lblProductSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // FrmClassifier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 538);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Classifier";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.Name = "FrmClassifier";
+            this.Text = "AI ETL Classifier";
+            this.Load += new System.EventHandler(this.FrmClassifier_Load);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -529,47 +406,30 @@
         #endregion
 
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private UiCrud uiCrudValue;
+        private UiCrud uiCrudKey;
+        private UiCrud uiCrudType;
+        private UiCrud uiCrudMake;
+        private UiCrud uiCrudModel;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbRowData;
+        private System.Windows.Forms.Label lblPkId;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btnAddAttribute;
+        private System.Windows.Forms.Button btnUpdateAttribute;
+        private System.Windows.Forms.Button btnDeleteAttribute;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnUpdateProduct;
+        private System.Windows.Forms.Button btnDeleteProduct;
+        private System.Windows.Forms.Label lblProductTreeSelected;
+        private System.Windows.Forms.Label lblProductSelected;
     }
 }
 

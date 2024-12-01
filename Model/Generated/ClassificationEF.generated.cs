@@ -27,8 +27,8 @@ namespace Models
    public partial class ClassificationEF : DbContext
    {
       #region DbSets
+      public virtual System.Data.Entity.DbSet<global::Models.Attribute> Attributes { get; set; }
       public virtual System.Data.Entity.DbSet<global::Models.AttributeKeys> AttributeKeys { get; set; }
-      public virtual System.Data.Entity.DbSet<global::Models.Attributes> Attributes { get; set; }
       public virtual System.Data.Entity.DbSet<global::Models.Make> Makes { get; set; }
       public virtual System.Data.Entity.DbSet<global::Models.Model> Models { get; set; }
       public virtual System.Data.Entity.DbSet<global::Models.Product> Products { get; set; }
@@ -119,6 +119,18 @@ namespace Models
          OnModelCreatingImpl(modelBuilder);
 
 
+         modelBuilder.Entity<global::Models.Attribute>()
+                     .ToTable("Attributes", "dbo")
+                     .HasKey(t => t.Id);
+         modelBuilder.Entity<global::Models.Attribute>()
+                     .Property(t => t.Id)
+                     .IsRequired()
+                     .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+         modelBuilder.Entity<global::Models.Attribute>()
+                     .HasMany(x => x.Products)
+                     .WithMany(x => x.Attributes)
+                     .Map(x => { x.ToTable("Products_x_Attributes"); x.MapLeftKey("Attribute_Id"); x.MapRightKey("Product_Id"); });
+
          modelBuilder.Entity<global::Models.AttributeKeys>()
                      .ToTable("AttributeKeys", "dbo")
                      .HasKey(t => t.Id);
@@ -133,14 +145,6 @@ namespace Models
                      .HasMany(x => x.Attributes)
                      .WithRequired(x => x.AttributeKeys)
                      .Map(x => x.MapKey("AttributeKeysId"));
-
-         modelBuilder.Entity<global::Models.Attributes>()
-                     .ToTable("Attributes", "dbo")
-                     .HasKey(t => t.Id);
-         modelBuilder.Entity<global::Models.Attributes>()
-                     .Property(t => t.Id)
-                     .IsRequired()
-                     .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
          modelBuilder.Entity<global::Models.Make>()
                      .ToTable("Makes", "dbo")
@@ -189,9 +193,6 @@ namespace Models
                      .HasMany(x => x.ProductImages)
                      .WithRequired(x => x.Product)
                      .Map(x => x.MapKey("ProductId"));
-         modelBuilder.Entity<global::Models.Product>()
-                     .HasMany(x => x.Attributes)
-                     .WithRequired(x => x.Product);
 
          modelBuilder.Entity<global::Models.ProductImage>()
                      .ToTable("ProductImages", "dbo")

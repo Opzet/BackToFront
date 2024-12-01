@@ -1,0 +1,101 @@
+﻿### Get all products
+GET http://localhost:5000/api/products
+Accept: application/json
+
+###
+
+### Get a product by ID
+GET http://localhost:5000/api/products/1
+Accept: application/json
+
+###
+
+### Create a new product
+POST http://localhost:5000/api/products
+Content-Type: application/json
+
+{
+  "Revision": "1.0",
+  "Make": {
+    "Name": "Test Make"
+  },
+  "Model": {
+    "Name": "Test Model"
+  },
+  "Type": {
+    "Name": "Test Type"
+  },
+  "Attributes": [
+    {
+      "Name": "Attribute1",
+      "AttributeKeys": {
+        "Name": "Key1"
+      }
+    },
+    {
+      "Name": "Attribute2",
+      "AttributeKeys": {
+        "Name": "Key2"
+      }
+    }
+  ],
+  "ProductImages": [
+    {
+      "ImagePath": "path/to/image1.jpg",
+      "ImageDate": "2023-10-01T00:00:00"
+    },
+    {
+      "ImagePath": "path/to/image2.jpg",
+      "ImageDate": "2023-10-01T00:00:00"
+    }
+  ]
+}
+
+###
+
+### Update a product
+PUT http://localhost:5000/api/products/1
+Content-Type: application/json
+
+{
+  "Revision": "1.1",
+  "Make": {
+    "Name": "Updated Make"
+  },
+  "Model": {
+    "Name": "Updated Model"
+  },
+  "Type": {
+    "Name": "Updated Type"
+  },
+  "Attributes": [
+    {
+      "Name": "Updated Attribute1",
+      "AttributeKeys": {
+        "Name": "Updated Key1"
+      }
+    },
+    {
+      "Name": "Updated Attribute2",
+      "AttributeKeys": {
+        "Name": "Updated Key2"
+      }
+    }
+  ],
+  "ProductImages": [
+    {
+      "ImagePath": "path/to/updated_image1.jpg",
+      "ImageDate": "2023-10-01T00:00:00"
+    },
+    {
+      "ImagePath": "path/to/updated_image2.jpg",
+      "ImageDate": "2023-10-01T00:00:00"
+    }
+  ]
+}
+
+###
+
+### Delete a product
+DELETE http://localhost:5000/api/products/1
+Accept: application/json

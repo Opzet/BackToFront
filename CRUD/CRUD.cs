@@ -23,7 +23,7 @@ namespace CRUD
         }
 
         // Read method
-        public static IEnumerable<T> Read<T>() where T : class
+        public static IEnumerable<T> ReadAll<T>() where T : class
         {
             using (var db = new ClassificationEF())
             {

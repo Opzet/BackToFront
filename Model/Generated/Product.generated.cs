@@ -34,8 +34,8 @@ namespace Models
       /// </summary>
       public Product()
       {
+         Attributes = new System.Collections.Generic.HashSet<global::Models.Attribute>();
          ProductImages = new System.Collections.Generic.HashSet<global::Models.ProductImage>();
-         Attributes = new System.Collections.Generic.HashSet<global::Models.Attributes>();
 
          Init();
       }
@@ -59,7 +59,7 @@ namespace Models
        * Navigation properties
        *************************************************************************/
 
-      public virtual ICollection<global::Models.Attributes> Attributes { get; private set; }
+      public virtual ICollection<global::Models.Attribute> Attributes { get; private set; }
 
       public virtual global::Models.Make Make { get; set; }
 

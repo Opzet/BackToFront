@@ -25,44 +25,41 @@ using System.Runtime.CompilerServices;
 
 namespace Models
 {
-   public partial class Attributes
+   public partial class Attribute
    {
       partial void Init();
 
       /// <summary>
       /// Default constructor
       /// </summary>
-      public Attributes()
+      public Attribute()
       {
+         Products = new System.Collections.Generic.HashSet<global::Models.Product>();
+
          Init();
       }
 
       /// <summary>
       /// Public constructor with required data
       /// </summary>
-      /// <param name="product"></param>
       /// <param name="attributekeys"></param>
-      public Attributes(global::Models.Product product, global::Models.AttributeKeys attributekeys)
+      public Attribute(global::Models.AttributeKeys attributekeys)
       {
-         if (product == null) throw new ArgumentNullException(nameof(product));
-         this.Product = product;
-         product.Attributes.Add(this);
-
          if (attributekeys == null) throw new ArgumentNullException(nameof(attributekeys));
          this.AttributeKeys = attributekeys;
          attributekeys.Attributes.Add(this);
 
+         Products = new System.Collections.Generic.HashSet<global::Models.Product>();
          Init();
       }
 
       /// <summary>
       /// Static create function (for use in LINQ queries, etc.)
       /// </summary>
-      /// <param name="product"></param>
       /// <param name="attributekeys"></param>
-      public static Attributes Create(global::Models.Product product, global::Models.AttributeKeys attributekeys)
+      public static Attribute Create(global::Models.AttributeKeys attributekeys)
       {
-         return new Attributes(product, attributekeys);
+         return new Attribute(attributekeys);
       }
 
       /*************************************************************************
@@ -89,10 +86,7 @@ namespace Models
       /// </summary>
       public virtual global::Models.AttributeKeys AttributeKeys { get; set; }
 
-      /// <summary>
-      /// Required
-      /// </summary>
-      public virtual global::Models.Product Product { get; set; }
+      public virtual ICollection<global::Models.Product> Products { get; private set; }
 
    }
 }

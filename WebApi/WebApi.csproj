@@ -3,10 +3,22 @@
     <TargetFramework>net48</TargetFramework>
     <OutputType>Exe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Version>1.0.0</Version>
+    <Title>WebApi Client</Title>
+
+    <Authors>David V</Authors>
+    <Company>PWD</Company>
+
+    <Description>
+      WebApi Service
+      
+    </Description>
+    
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\CRUD\CRUD.csproj" />
     <ProjectReference Include="..\Model\Model.csproj" />
+    <ProjectReference Include="..\WebApiClient\WebApiClient.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
