@@ -17,7 +17,13 @@
 
     <PackageReadmeFile>README.md</PackageReadmeFile>
 
-    <AnalysisLevel>none</AnalysisLevel>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+
+    <RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+
+    <RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
+
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     
   </PropertyGroup>
   <ItemGroup>

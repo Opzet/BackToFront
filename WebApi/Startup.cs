@@ -16,6 +16,10 @@ namespace WebApi
     /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Startup Configuration
+        /// </summary>
+        /// <param name="appBuilder"></param>
         public void Configuration(IAppBuilder appBuilder)
         {
 //#if !DEBUG
@@ -92,6 +96,7 @@ namespace WebApi
             //config.Filters.Add(new AuthorizeAttribute());
 
             config.MapHttpAttributeRoutes();
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
@@ -106,6 +111,7 @@ namespace WebApi
 
                 //  c.OperationFilter<AuthorizeCheckOperationFilter>();
             })
+
             .EnableSwaggerUi(c =>
             {
                 // http://127.0.0.1:54322/swagger/ui/index

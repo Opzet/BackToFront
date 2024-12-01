@@ -88,8 +88,8 @@ namespace WebApi
                 // Spin Up WebApi by doing a call
                 Stopwatch sw = new Stopwatch();
                 sw.Start();
-                Console.WriteLine($"<SPIN UP OWIN API HOST> Dummy http Web Request ");
-                Console.WriteLine("\t...please wait...");
+                Console.WriteLine($"\n<OWIN WEB API HOST STARTED>\n");
+                Console.WriteLine("\thttp Web test Request ... please wait ...\n");
 
 
                 // Do a dummy call to the WebApi server to spin it up
@@ -123,7 +123,7 @@ namespace WebApi
 
 
                 sw.Stop(); // Stop stopwatch
-                Console.WriteLine($"\n\n<INITIALISE DURATION> Startup Time: {baseAddress} - {sw.ElapsedMilliseconds} ms");
+                Console.WriteLine($"\n\n<INITIALISED : DURATION> Startup Time: {sw.ElapsedMilliseconds} ms");
 
                 Console.WriteLine("Press <ENTER> to stop the server and close the app...");
                 Console.ReadLine();

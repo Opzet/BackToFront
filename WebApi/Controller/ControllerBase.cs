@@ -11,7 +11,7 @@ namespace WebApi.Controllers
     /// Base controller providing common CRUD operations.
     /// </summary>
     /// <typeparam name="T">The type of the entity.</typeparam>
-    public class Controller_Base<T> : ApiController where T : class
+    public class ControllerBase<T> : ApiController where T : class
     {
         /// <summary>
         /// Retrieves all entities.
