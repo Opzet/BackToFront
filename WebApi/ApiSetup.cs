@@ -15,12 +15,12 @@ namespace WebApi
         /// </summary>
         /// 
 
-#if TESTING
+//#if TESTING
         public static IPAddress localIPAddress = new IPAddress(new byte[] { 127, 0, 0, 1 });
-         //public static IPAddress localIPAddress = new IPAddress(new byte[] { 192, 168, 100, 109 });
-#else
-        public static IPAddress localIPAddress = new IPAddress(new byte[] { 192, 168, 100, 171 }); //SVR14
-#endif                                                                                           //public static IPAddress localIPAddress = new IPAddress(new byte[] { 192, 168, 100, 109 });
+//         //public static IPAddress localIPAddress = new IPAddress(new byte[] { 192, 168, 100, 109 });
+//#else
+//        public static IPAddress localIPAddress = new IPAddress(new byte[] { 192, 168, 100, 171 });
+//#endif                                                                                           
         /// <summary>
         /// The internal port on which the API listens.
         /// </summary>

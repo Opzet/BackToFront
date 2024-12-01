@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Web.Http;
 using System.Web.Http.Description;
 using CRUD;
@@ -7,6 +8,21 @@ namespace WebApi.Controllers
 {
     public class Controller_Base<T> : ApiController where T : class
     {
+
+        [HttpGet]
+        [Route("api/[controller]/all")]
+        public virtual IHttpActionResult GetAll(string appName = "", string function = "", string user = "")
+        {
+            IEnumerable<T> entities = Db.ReadAll<T>();
+
+            if (entities == null) // || entities.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(entities);
+        }
+
         [HttpGet]
         [Route("api/[controller]")]
         public virtual IHttpActionResult Get(int id, string appName = "", string function = "", string user = "")

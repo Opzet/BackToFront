@@ -93,15 +93,21 @@ namespace WebApi
 
                 // Do a dummy call to the WebApi server to spin it up
                 var productWebList = WebApiClient.ApiCalls.GetAllAsync<Product>().Result;
-
-                // Display the WebApi response
-                foreach (var product in productWebList)
+                if (productWebList != null)
                 {
-                    // Use reflection to show each property of the product
-                    foreach (PropertyInfo prop in product.GetType().GetProperties())
+                    // Display the WebApi response
+                    foreach (var product in productWebList)
                     {
-                        Console.WriteLine($"{prop.Name}: {prop.GetValue(product, null)}");
+                        // Use reflection to show each property of the product
+                        foreach (PropertyInfo prop in product.GetType().GetProperties())
+                        {
+                            Console.WriteLine($"{prop.Name}: {prop.GetValue(product, null)}");
+                        }
                     }
+                }
+                else
+                {
+                    Console.WriteLine("WebApiClient.ApiCalls.GetAllAsync<Product>() = null");
                 }
 
                 sw.Stop(); // Stop stopwatch

@@ -30,12 +30,13 @@ namespace WebApiClient
 
         public static async Task<IEnumerable<T>> GetAllAsync<T>()
         {
-            HttpResponseMessage response = await _httpClient.GetAsync($"api/{typeof(T).Name}");
+            HttpResponseMessage response = await _httpClient.GetAsync($"api/{typeof(T).Name}/all");
             if (response.IsSuccessStatusCode)
             {
                 string json = await response.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<IEnumerable<T>>(json, settings);
             }
+            // {StatusCode: 404, ReasonPhrase: 'Not Found', 
             return null;
         }
 
