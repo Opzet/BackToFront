@@ -5,13 +5,39 @@ Need to describe API's parameters, responses, errors, and document evertyhing, a
 In order to automatically connect our frontend code with our backend APIs, we need to establish a common language between the two. 
 The backend APIs must be documented in a way that our frontend can understand and consume, and this is where OpenAPI comes into play.
 
+
+
 ### Documentation 
-OpenAPI Uprising
+https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#generatedocumentationfile
+```
+
+<PropertyGroup>
+   <LangVersion>8.0</LangVersion>
+   <!-- Ensures C# 8.0 compatibility -->
+   <Nullable>disable</Nullable>
+   <!-- Disable nullable reference types -->
+ </PropertyGroup>
+
+<PropertyGroup>
+    <EnablePreviewFeatures>True</EnablePreviewFeatures>
+    <GenerateRequiresPreviewFeaturesAttribute>False</GenerateRequiresPreviewFeaturesAttribute>
+</PropertyGroup>
+
+```
+#### Visual Studio : Generate Documentation 
+Information about generating documentation from code comments, see XML documentation comments (C#),
+https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#generatedocumentationfile
+
+## OpenAPI Uprising
 
 Documentation and Monitoring System which tracks your Software Architecture, (Micro-)Services, API Endpoints, Packages and other Software Artifacts.
 
-#### https://apimundo.com
-Like  Swagger eco system
+
+
+### Swashbuckle & NSwag Generation
+
+https://www.nuget.org/packages/NSwag.CodeGeneration
+
 
 #### NSwag
 https://github.com/RicoSuter/NSwag
@@ -27,6 +53,10 @@ redocly build-docs openapi.yaml
 
 ---
 
+#### https://apimundo.com
+Like  Swagger eco system
+
+--- 
 
 ## Swagger (via Swashbuckle) 
 
