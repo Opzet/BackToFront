@@ -8,6 +8,26 @@ The backend APIs must be documented in a way that our frontend can understand an
 ### Documentation 
 OpenAPI Uprising
 
+Documentation and Monitoring System which tracks your Software Architecture, (Micro-)Services, API Endpoints, Packages and other Software Artifacts.
+
+#### https://apimundo.com
+Like  Swagger eco system
+
+#### NSwag
+https://github.com/RicoSuter/NSwag
+![image](https://github.com/user-attachments/assets/bfd0d1e5-863e-44ed-b955-0ec5ebf68117)
+
+#### redocly build-docs openapi.yaml
+
+https://redocly.com/docs/cli/commands/build-docs
+
+```
+redocly build-docs openapi.yaml
+```
+
+---
+
+
 ## Swagger (via Swashbuckle) 
 
 **Swagger** = Ui
