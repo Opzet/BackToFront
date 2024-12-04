@@ -12,8 +12,8 @@
 2.	CRUD -  Scaffolding via Generics / NSwag
 3.	Console – Test CRUD (Automated TDD)
 4.	WebApi – Swagger/Swashbuckle – Controller Scaffolding via NSwag
-5.	Observability - Jaeger Transaction tracing
-6.	Dashboard - RabbtMq
+5.	Observability - Jaeger (Transaction and Performance Metrics)
+6.	Dashboard - RabbtMq (Activity Feed)
 7.	WebApiClient – scaffolding via NSwag
 8.	Front End : Js Component Library
 
