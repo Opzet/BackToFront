@@ -12,8 +12,10 @@
 2.	CRUD -  Scaffolding via Generics / NSwag
 3.	Console – Test CRUD (Automated TDD)
 4.	WebApi – Swagger/Swashbuckle – Controller Scaffolding via NSwag
-5.	WebApiClient – scaffolding via NSwag
-6.	Front End : Js Component Library
+5.	Observability - Jaeger Transaction tracing
+6.	Dashboard - RabbtMq
+7.	WebApiClient – scaffolding via NSwag
+8.	Front End : Js Component Library
 
 ## Front End :
 	Ui Ux : Modern libaries - unloaded frontend - Databound
